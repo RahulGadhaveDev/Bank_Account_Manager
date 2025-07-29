@@ -40,5 +40,21 @@ public class RepoBank {
 		session.close();
 
 	}
+	
+	public void getData() {
+		SessionFactory factory = BankUtility.getfactory();
+		Session session = factory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		System.out.println("enter account id for get acount");
+		int id = sc.nextInt();
+		Account account = session.find(Account.class, id);
+		
+		System.out.println(account.toString());
+		
+		transaction.commit();
+		session.close();
+		
+	}
 
 }

@@ -3,6 +3,8 @@ package com.Bank.Entity;
 import java.sql.Date;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -11,6 +13,7 @@ import jakarta.persistence.Table;
 public class Account {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
 	private String accountHolder;
@@ -59,6 +62,12 @@ public class Account {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	@Override
+	public String toString() {
+		return "Account [id=" + id + ", accountHolder=" + accountHolder + ", accountType=" + accountType + ", balance="
+				+ balance + ", date=" + date + "]";
 	}
 	
 }
