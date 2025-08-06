@@ -1,5 +1,6 @@
 package com.Bank.repository;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.hibernate.Session;
@@ -54,6 +55,21 @@ public class RepoBank {
 		
 		System.out.println(account.toString());
 		
+		transaction.commit();
+		session.close();
+		
+	}
+	public void getAllData() {
+		SessionFactory factory = BankUtility.getfactory();
+		Session session = factory.openSession();
+		Transaction transaction = session.beginTransaction();
+		
+		
+	   List<Account> getAccount	=session.createQuery("Select a from Account a",Account.class).getResultList();
+		
+	   getAccount.stream().forEach((Account)-> System.out.println(getAccount));
+	   
+	   System.out.println(getAccount.toString());
 		transaction.commit();
 		session.close();
 		

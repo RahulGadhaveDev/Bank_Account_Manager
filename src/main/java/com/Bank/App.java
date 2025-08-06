@@ -14,6 +14,7 @@ public class App {
 
 		System.out.println("1. post data");
 		System.out.println("2. Enter id to get account ");
+		System.out.println("3. get all data");
 		Scanner sc = new Scanner(System.in);
 
 		int opration = sc.nextInt();
@@ -24,6 +25,10 @@ public class App {
 			break;
 		case 2:
 			repo.getData();
+			break;
+			
+		case 3:
+			repo.getAllData();
 			break;
 		}
 
