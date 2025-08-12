@@ -57,6 +57,8 @@ public class RepoBank {
 		session.close();
 		
 	}
+	
+	//get data from database 
 	public void getAllData() {
 		SessionFactory factory = BankUtility.getfactory();
 		Session session = factory.openSession();
