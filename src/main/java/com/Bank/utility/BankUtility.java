@@ -2,7 +2,7 @@ package com.Bank.utility;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
+//singelton dign pattern
 public class BankUtility {
 	
 	private BankUtility() {
