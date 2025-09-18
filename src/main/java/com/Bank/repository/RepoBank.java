@@ -12,7 +12,7 @@ import com.Bank.utility.BankUtility;
 
 public class RepoBank {
 	Scanner sc = new Scanner(System.in);
-	
+	//add data from postman database
 	public void postData() {
 
 		Account account = new Account();
