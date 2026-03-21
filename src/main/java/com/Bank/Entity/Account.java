@@ -8,7 +8,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-//entity class in 
+//entity class
 
 @Entity
 @Table(name = "Accounts")
